@@ -124,7 +124,7 @@ RUN pip install \
 
 # install other python packages
 RUN pip install numpy==1.24.4
-RUN pip install scipy1.10.1
+RUN pip install scipy==1.10.1
 RUN pip install spatialmath-python==1.0.5
 
 RUN pip install matplotlib==3.7.5
