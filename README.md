@@ -21,6 +21,7 @@ Follow the below instruction on cloning necessary repos to use the controllers. 
 
 For kuka_fri (used for the real robot). If you don't have access to it, you can skip the next instruction block, and still work in simulation.
 ```console
+mkdir kuka_dependencies
 cd kuka_dependencies
 git clone --recurse-submodules git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/kuka_fri.git
 cd kuka_fri
@@ -38,21 +39,23 @@ cd corrade
 git checkout 0d149ee9f26a6e35c30b1b44f281b272397842f5
 cd ..
 git clone --recurse-submodules git@github.com:epfl-lasa/robot_controllers.git
+cd ..
 ```
 Now you can build you docker image by
 ```console
-cd ..
-docker build -t kuka_ros .
+docker build -t biomech_safe_defl .
 ```
-this can take a while, grab a coffee, make some tea ,and after image is finished building , you can check your list of available docker image by
+this can take a while, grab a coffee, make some tea, and after image is finished building, you can check your list of available docker image by
 ``` console
 docker image list
 ```
+You should see information about the image `biomech_safe_defl` which we just built!
+
 In the docker file, we created a user `kuka_cor` with `USER_UID` and `USER_GID` both at 1000, same as your host. This mean that you can share volumes and files between docker image and host.
 
 # Container
 Here, you create the actual docker container that will allow to run the code.
-You should put packages you wish to run on kuka into the catkin workspace's **src**. This always includes the TU Delft implementation of `iiwa_ros`. Here, we will also install the `biomechanical_safe_deflection` package, and check out to a tested version of it. Clone and set up the packages by
+You should put packages you wish to run on kuka into the catkin workspace's **src**. This always includes the TU Delft implementation of [`iiwa_ros`](https://gitlab.tudelft.nl/kuka-iiwa-7-cor-lab/iiwa_ros). Here, we will also install the [`biomechanical_safe_deflection`](https://github.com/itbellix/biomechanical_safe_deflection) package, and check out to a tested version of it. Clone and set up the packages by
 ```console
 cd catkin_ws/src 
 git clone --recurse-submodules git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/iiwa_ros.git
@@ -70,10 +73,14 @@ cd ../../..
 
 Run the docker image and load directory `iiwa_ros` as an volume
 ```console
-docker run -it --user kuka_cor --name my_container --network=host --ipc=host -v $PWD/catkin_ws:/catkin_ws -v /temp/.X11-unix:/temp/.X11-unix:rw --env=DISPLAY kuka_ros
+docker run -it --user kuka_cor --name my_container --network=host --ipc=host -v $PWD/catkin_ws:/catkin_ws -v /temp/.X11-unix:/temp/.X11-unix:rw --env=DISPLAY biomech_safe_defl
 ```
 
-This will create a container named `my_container` with the image `kuka_ros`, and at any point, you can exit the container with `ctrl+ d`.You can start it again with 
+This will create a container named `my_container` with the image `kuka_ros`, and at any point, you can exit the container with `ctrl+ d`.
+
+*Note*: the first time you run this you should see this error `bash: /catkin_ws/devel/setup.bash: No such file or directory`. This is because we have not run `catkin build` yet, so don't worry!
+
+You can start it again with 
 ```console
 docker start -i my_container
 ```
@@ -83,23 +90,23 @@ docker exec -it my_container bash
 ```
 Firstly, you should build your working package by 
 ```console
-cd /catkin_ws
+cd catkin_ws
 catkin build
-source /catkin_ws/devel/setup.bash
 cd ..
+source catkin_ws/devel/setup.bash
 ```
 Any changes made by `catkin_make` will also show up in the host directory so you don't need to rebuild the package every time you rerun your image. And sourcing of your package is taken care of in bashrc. 
 
 # Venv
 To avoid dependency conflicts, we have set up a virtual environment used only by some of the code. You can create by running:
 ```console
-python -m venv venv_project
+sudo python -m venv venv_project
 source venv_project/bin/activate
-pip install -r requirements.txt
+pip install -r /home/kuka_cor/requirements.txt
 ```
 
 # Run
-Open 2 terminals in the container, and run:
+Open 2 terminals in the container, and :
 1. the robot controller (and Gazebo if `simulation` argument is set to `true`)
 ```console
 roslaunch biomechanical_safe_deflection controller.launch simulation:=true

@@ -118,25 +118,33 @@ RUN mkdir build && cd build && \
 
 # install robotics toolbox
 RUN pip install \
-    roboticstoolbox-python \
+    roboticstoolbox-python==1.1.1 \
     spatialmath-rospy \
     spatialgeometry
 
-RUN pip install "numpy>=1.20.0"
-RUN pip install --upgrade scipy
-RUN pip install spatialmath-python
+# install other python packages
+RUN pip install numpy==1.24.4
+RUN pip install scipy1.10.1
 RUN pip install spatialmath-python==1.0.5
 
+RUN pip install matplotlib==3.7.5
+RUN pip install pygame==2.6.1
+RUN pip install pyyaml==6.0.2
+RUN pip install rospkg=1.6.0
+RUN pip install casadi==3.6.7
 
 # python fix
 RUN apt-get update
 RUN apt-get install python3-tk -y
-RUN apt-get update 
-RUN apt-get install -y mesa-utils libgl1-mesa-glx libgl1-mesa-dri
+RUN apt-get update && apt-get install -y mesa-utils libgl1-mesa-glx libgl1-mesa-dri
+
+# enable virtual environment creation
+RUN apt update
+RUN apt install python3.8-venv -y
 
 # install IPOPT and MUMPS for optimization
 RUN apt update 
-RUN apt install coinor-libipopt-dev libmumps-seq-dev
+RUN apt install -y coinor-libipopt-dev libmumps-seq-dev
 
 # Display environment setup. 
 ENV DISPLAY=host.docker.internal:0.0
@@ -145,7 +153,9 @@ ENV NVIDIA_DRIVER_CAPABILITIES=all
 
 WORKDIR /
 
+# copy files to the container
 COPY bashrc /home/${USERNAME}/.bashrc
+COPY requirements.txt /home/${USERNAME}/requirements.txt
 
 # connect to real kuka robot
 RUN export ROS_MASTER_URI=http://192.180.1.5:30202
