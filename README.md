@@ -66,7 +66,7 @@ cd ../../..
 ```
 If you are working only in simulation (i.e., you don't have access to the `kuka_fri` package), run the following:
 ```console
-cd iiwa_ros/src/iiwa_driver
+cd catkin_ws/src/iiwa_ros/src/iiwa_driver
 touch CATKIN_IGNORE
 cd ../../..
 ```
