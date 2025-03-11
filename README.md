@@ -57,11 +57,12 @@ In the docker file, we created a user `kuka_cor` with `USER_UID` and `USER_GID` 
 Here, you create the actual docker container that will allow to run the code.
 You should put packages you wish to run on kuka into the catkin workspace's **src**. This always includes the TU Delft implementation of [`iiwa_ros`](https://gitlab.tudelft.nl/kuka-iiwa-7-cor-lab/iiwa_ros). Here, we will also install the [`biomechanical_safe_deflection`](https://github.com/itbellix/biomechanical_safe_deflection) package, and check out to a tested version of it. Clone and set up the packages by
 ```console
-cd catkin_ws/src 
+cd catkin_ws
+mkdir src && cd src 
 git clone --recurse-submodules git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/iiwa_ros.git
 git clone --recurse-submodules git@github.com:itbellix/biomechanical_safe_deflection.git
 cd biomechanical_safe_deflection
-git checkout 40e8cb2a3e955647bbb6fd5374403b3994f0f531
+git checkout 7d17b308c16e42699ef6ccb7e298da843670b470
 cd ../../..
 ```
 If you are working only in simulation (i.e., you don't have access to the `kuka_fri` package), run the following:
