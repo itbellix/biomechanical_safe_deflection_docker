@@ -1,0 +1,6 @@
+iiwa_ros/legacy_modules/iiwa_control
+/catkin_ws/devel/.private/iiwa_control/cmake.lock /catkin_ws/devel/./cmake.lock
+/catkin_ws/devel/.private/iiwa_control/share/iiwa_control/cmake/iiwa_controlConfig-version.cmake /catkin_ws/devel/share/iiwa_control/cmake/iiwa_controlConfig-version.cmake
+/catkin_ws/devel/.private/iiwa_control/share/iiwa_control/cmake/iiwa_controlConfig.cmake /catkin_ws/devel/share/iiwa_control/cmake/iiwa_controlConfig.cmake
+/catkin_ws/devel/.private/iiwa_control/lib/libCustomEffortController.so /catkin_ws/devel/lib/libCustomEffortController.so
+/catkin_ws/devel/.private/iiwa_control/lib/pkgconfig/iiwa_control.pc /catkin_ws/devel/lib/pkgconfig/iiwa_control.pc

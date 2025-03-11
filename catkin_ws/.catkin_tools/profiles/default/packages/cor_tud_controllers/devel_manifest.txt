@@ -1,0 +1,11 @@
+iiwa_ros/src/cor_tud_controllers
+/catkin_ws/devel/.private/cor_tud_controllers/cmake.lock /catkin_ws/devel/./cmake.lock
+/catkin_ws/devel/.private/cor_tud_controllers/share/cor_tud_controllers/cmake/cor_tud_controllersConfig.cmake /catkin_ws/devel/share/cor_tud_controllers/cmake/cor_tud_controllersConfig.cmake
+/catkin_ws/devel/.private/cor_tud_controllers/share/cor_tud_controllers/cmake/cor_tud_controllersConfig-version.cmake /catkin_ws/devel/share/cor_tud_controllers/cmake/cor_tud_controllersConfig-version.cmake
+/catkin_ws/devel/.private/cor_tud_controllers/lib/pkgconfig/cor_tud_controllers.pc /catkin_ws/devel/lib/pkgconfig/cor_tud_controllers.pc
+/catkin_ws/devel/.private/cor_tud_controllers/lib/python3/dist-packages/multi_robot/__init__.py /catkin_ws/devel/lib/python3/dist-packages/multi_robot/__init__.py
+/catkin_ws/devel/.private/cor_tud_controllers/lib/python3/dist-packages/cic/__init__.py /catkin_ws/devel/lib/python3/dist-packages/cic/__init__.py
+/catkin_ws/devel/.private/cor_tud_controllers/lib/python3/dist-packages/robot/__init__.py /catkin_ws/devel/lib/python3/dist-packages/robot/__init__.py
+/catkin_ws/devel/.private/cor_tud_controllers/lib/cor_tud_controllers/add_namespace.py /catkin_ws/devel/lib/cor_tud_controllers/add_namespace.py
+/catkin_ws/devel/.private/cor_tud_controllers/lib/cor_tud_controllers/cmake.lock /catkin_ws/devel/lib/cor_tud_controllers/cmake.lock
+/catkin_ws/devel/.private/cor_tud_controllers/lib/cor_tud_controllers/torque_controller.py /catkin_ws/devel/lib/cor_tud_controllers/torque_controller.py

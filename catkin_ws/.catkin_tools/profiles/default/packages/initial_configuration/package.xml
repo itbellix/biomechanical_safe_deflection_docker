@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>initial_configuration</name>
+  <version>0.0.1</version>
+  <description>Example of setting configuration of robot</description>
+
+  <maintainer email="r.e.s.maessen@student.tudelft.nl">Rosa</maintainer>
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cor_tud_controllers</build_depend>
+  <build_depend>cor_tud_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>cor_tud_controllers</build_export_depend>
+  <build_export_depend>cor_tud_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>cor_tud_controllers</exec_depend>
+  <exec_depend>cor_tud_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

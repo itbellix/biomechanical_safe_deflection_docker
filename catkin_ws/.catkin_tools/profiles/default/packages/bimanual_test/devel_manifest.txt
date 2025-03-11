@@ -1,0 +1,8 @@
+how-to/kuka/src/bimanual_test
+/catkin_ws/devel/.private/bimanual_test/cmake.lock /catkin_ws/devel/./cmake.lock
+/catkin_ws/devel/.private/bimanual_test/share/bimanual_test/cmake/bimanual_testConfig-version.cmake /catkin_ws/devel/share/bimanual_test/cmake/bimanual_testConfig-version.cmake
+/catkin_ws/devel/.private/bimanual_test/share/bimanual_test/cmake/bimanual_testConfig.cmake /catkin_ws/devel/share/bimanual_test/cmake/bimanual_testConfig.cmake
+/catkin_ws/devel/.private/bimanual_test/lib/pkgconfig/bimanual_test.pc /catkin_ws/devel/lib/pkgconfig/bimanual_test.pc
+/catkin_ws/devel/.private/bimanual_test/lib/bimanual_test/bimanual_test.py /catkin_ws/devel/lib/bimanual_test/bimanual_test.py
+/catkin_ws/devel/.private/bimanual_test/lib/bimanual_test/cmake.lock /catkin_ws/devel/lib/bimanual_test/cmake.lock
+/catkin_ws/devel/.private/bimanual_test/lib/bimanual_test/multi_robot_test.py /catkin_ws/devel/lib/bimanual_test/multi_robot_test.py

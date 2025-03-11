@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cor_tud_gazebo</name>
+  <version>0.0.1</version>
+  <description>The cor_tud_gazebo package</description>
+
+  <maintainer email="leandro@todo.todo">leandro</maintainer>
+
+  <license>Apach 2.0 - Free for all, no warranties whatsoever</license>
+
+  <author email="leandro@todo.todo">leandro</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

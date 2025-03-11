@@ -1,0 +1,7 @@
+how-to/kuka/src/dual_computer_setup
+/catkin_ws/devel/.private/dual_computer_setup_example/cmake.lock /catkin_ws/devel/./cmake.lock
+/catkin_ws/devel/.private/dual_computer_setup_example/share/dual_computer_setup_example/cmake/dual_computer_setup_exampleConfig.cmake /catkin_ws/devel/share/dual_computer_setup_example/cmake/dual_computer_setup_exampleConfig.cmake
+/catkin_ws/devel/.private/dual_computer_setup_example/share/dual_computer_setup_example/cmake/dual_computer_setup_exampleConfig-version.cmake /catkin_ws/devel/share/dual_computer_setup_example/cmake/dual_computer_setup_exampleConfig-version.cmake
+/catkin_ws/devel/.private/dual_computer_setup_example/lib/pkgconfig/dual_computer_setup_example.pc /catkin_ws/devel/lib/pkgconfig/dual_computer_setup_example.pc
+/catkin_ws/devel/.private/dual_computer_setup_example/lib/dual_computer_setup_example/cmake.lock /catkin_ws/devel/lib/dual_computer_setup_example/cmake.lock
+/catkin_ws/devel/.private/dual_computer_setup_example/lib/dual_computer_setup_example/send_poses.py /catkin_ws/devel/lib/dual_computer_setup_example/send_poses.py

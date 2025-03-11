@@ -1,0 +1,7 @@
+how-to/kuka/src/initial_configuration
+/catkin_ws/devel/.private/initial_configuration/cmake.lock /catkin_ws/devel/./cmake.lock
+/catkin_ws/devel/.private/initial_configuration/share/initial_configuration/cmake/initial_configurationConfig-version.cmake /catkin_ws/devel/share/initial_configuration/cmake/initial_configurationConfig-version.cmake
+/catkin_ws/devel/.private/initial_configuration/share/initial_configuration/cmake/initial_configurationConfig.cmake /catkin_ws/devel/share/initial_configuration/cmake/initial_configurationConfig.cmake
+/catkin_ws/devel/.private/initial_configuration/lib/pkgconfig/initial_configuration.pc /catkin_ws/devel/lib/pkgconfig/initial_configuration.pc
+/catkin_ws/devel/.private/initial_configuration/lib/initial_configuration/cmake.lock /catkin_ws/devel/lib/initial_configuration/cmake.lock
+/catkin_ws/devel/.private/initial_configuration/lib/initial_configuration/set_initial_config.py /catkin_ws/devel/lib/initial_configuration/set_initial_config.py
