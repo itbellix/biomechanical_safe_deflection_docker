@@ -62,7 +62,7 @@ mkdir src && cd src
 git clone --recurse-submodules git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/iiwa_ros.git
 git clone --recurse-submodules git@github.com:itbellix/biomechanical_safe_deflection.git
 cd biomechanical_safe_deflection
-git checkout b000b7e8c6629c67e60df490efa02ee064cbc8ce
+git checkout 7d799e34ccd2d9cdcdf4b25849a068abafddfd2b
 cd ../../..
 ```
 If you are working only in simulation (i.e., you don't have access to the `kuka_fri` package), run the following:
