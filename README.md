@@ -2,7 +2,6 @@
 - [Prerequisite](#prerequisite)
 - [Installation](#installation)
 - [Container](#Container)
-- [Venv](#venv)
 - [Run](#run)
 - [Troubleshooting](#troubleshooting)
 # Introduction
@@ -98,14 +97,6 @@ source catkin_ws/devel/setup.bash
 ```
 Any changes made by `catkin_make` will also show up in the host directory so you don't need to rebuild the package every time you rerun your image. And sourcing of your package is taken care of in bashrc. 
 
-# Venv
-To avoid dependency conflicts, we have set up a virtual environment used only by some of the code. You can create by running:
-```console
-sudo python -m venv venv_project
-source venv_project/bin/activate
-pip install -r /home/kuka_cor/requirements.txt
-```
-
 # Run
 Open 2 terminals in the container, and :
 1. the robot controller (and Gazebo if `simulation` argument is set to `true`)
@@ -115,7 +106,7 @@ roslaunch biomechanical_safe_deflection controller.launch simulation:=true
 
 2. the shared controllers
 ```console
-roslaunch biomechanical_safe_deflection start_all.launch simulation:=true venv:=/catkin_ws/src/biomechanical_safe_deflection/venv_project/bin/python3
+roslaunch biomechanical_safe_deflection start_all.launch simulation:=true
 ```
 
 You should be see Gazeb firing up with a KUKA LBR iiwa 7 model, and a `dynamic_reconfigure` window that allows to select the task to execute.
