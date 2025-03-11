@@ -17,7 +17,7 @@ Go to your home folder and install this repo by
 git clone git@github.com:itbellix/biomechanical_safe_deflection_docker.git
 cd biomechanical_safe_deflection_docker
 ```
-Follow the below instruction on cloning necessary repos to use the controllers. **You don't need to build any of the packages, the dockerfile will build them as it builds the docker image.** However, please make sure to switch to the correct branch on each repo. 
+Follow the instructions on cloning the repos to use the controllers. **You don't need to build any of the packages, the dockerfile will build them as it builds the docker image.** However, please make sure to switch to the correct branch on each repo. 
 
 For kuka_fri (used for the real robot). If you don't have access to it, you can skip the next instruction block, and still work in simulation.
 ```console
@@ -62,7 +62,7 @@ mkdir src && cd src
 git clone --recurse-submodules git@gitlab.tudelft.nl:kuka-iiwa-7-cor-lab/iiwa_ros.git
 git clone --recurse-submodules git@github.com:itbellix/biomechanical_safe_deflection.git
 cd biomechanical_safe_deflection
-git checkout 7d17b308c16e42699ef6ccb7e298da843670b470
+git checkout b000b7e8c6629c67e60df490efa02ee064cbc8ce
 cd ../../..
 ```
 If you are working only in simulation (i.e., you don't have access to the `kuka_fri` package), run the following:
