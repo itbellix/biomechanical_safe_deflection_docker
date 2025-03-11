@@ -130,7 +130,7 @@ RUN pip install spatialmath-python==1.0.5
 RUN pip install matplotlib==3.7.5
 RUN pip install pygame==2.6.1
 RUN pip install pyyaml==6.0.2
-RUN pip install rospkg=1.6.0
+RUN pip install rospkg==1.6.0
 RUN pip install casadi==3.6.7
 
 # python fix
